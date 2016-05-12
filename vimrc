@@ -40,7 +40,7 @@ set autoindent
 
 "tab & expand
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=2
 set softtabstop=4
 "set noexpandtab
 
@@ -324,3 +324,18 @@ colorscheme monokai
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 let python_highlight_all = 1
+
+"let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+let Tlist_Inc_Winwidth = 0
+nnoremap <f5> :!ctags -R<CR>
+nnoremap <f9> :TlistToggle<CR>
+
+"let g:syntastic_cpp_include_dirs = ['/home/shuchao/Documents/github/woody/lib']
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
