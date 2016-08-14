@@ -334,8 +334,8 @@ let Tlist_Inc_Winwidth = 0
 nnoremap <f5> :!ctags -R<CR>
 nnoremap <f9> :TlistToggle<CR>
 
-"let g:syntastic_cpp_include_dirs = ['/home/shuchao/Documents/github/woody/lib']
+"let g:syntastic_cpp_compiler = 'clang++'
+"let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
-
+let NERDTreeDirArrows=0
+let g:syntastic_mode_map = { 'mode': 'passive' }
