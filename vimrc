@@ -16,10 +16,6 @@ set showmode    "show current mode down the bottom
 
 set number      "show line numbers
 
-"display tabs and trailing spaces
-"set list
-"set listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
 
@@ -44,6 +40,9 @@ set shiftwidth=2
 set softtabstop=4
 "set noexpandtab
 
+"set encoding=cp936
+set fileencoding=cp936
+set fileencodings=ucs-bom,cp936,utf-8,gb18030,big5,euc-jp,euc-kr,latin1
 
 "folding settings
 set foldmethod=indent   "fold based on indent
@@ -339,3 +338,10 @@ nnoremap <f9> :TlistToggle<CR>
 
 let NERDTreeDirArrows=0
 let g:syntastic_mode_map = { 'mode': 'passive' }
+
+set paste
+
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+let g:go_version_warning = 0
